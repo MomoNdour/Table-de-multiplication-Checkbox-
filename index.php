@@ -70,7 +70,7 @@
 			padding: 25px;
 			color: #424242;		
 		}
-		LABEL {
+		/* LABEL {
 			
 			padding-left: 40px;
 			float: left;
@@ -81,7 +81,7 @@
 			padding-top: 10px;
 			font-size: 18px;
 			color: #424242;
-		}
+		} */
 		LABEL:hover {
 			color: #212121;
 
@@ -155,18 +155,17 @@
 			<label><input type="checkbox" name="check_9" class="checkbox" /> Table de 9</label>
 			<label><input type="checkbox" name="check_10" class="checkbox" /> Table de 10</label> -->
 
-			<?php
+				<?php
 				for($i = 0; $i <= 10; $i++)
 				{
-					echo ("<INPUT TYPE='checkbox' NAME='nombre[]' VALUE='$i'/>");
-					echo("<LABEL FOR='$i'>$i</LABEL> ");
+					echo("<LABEL FOR='$i'>Table de $i</LABEL>&nbsp&nbsp&nbsp");
+					echo ("<INPUT TYPE='checkbox' class='checkbox' NAME='nombre[]' VALUE='$i'/><br>");
 				}
 			?>
-
 			<?php
 				if (isset($_POST["nombre"]))
 					{
-						$a=$_POST["nombre"];
+						$a = $_POST["nombre"];
 						$length = count($a);
 						for($i=0; $i<$length; $i++)
 						{
@@ -190,7 +189,6 @@
 		</div>
 		
 	</div>	 
-
 </section>
 </form>
 </body>
